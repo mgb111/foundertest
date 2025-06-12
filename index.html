@@ -215,15 +215,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🚨 Founder Burnout Early Warning System</h1>
-            <p>Track the signs before you hit the wall (because nobody talks about this part)</p>
+                    <div class="header">
+            <h1>🚨 Solo Founder Burnout Early Warning System</h1>
+            <p>Track the signs before you crash and burn (because there's no co-founder to catch you)</p>
         </div>
         
         <div class="content">
             <div class="warning-box">
                 <h3>⚠️ Why This Matters</h3>
-                <p>Most founders don't realize they're burning out until they're already crispy. This tracker helps you catch the early warning signs before you make bad decisions, lose key people, or torch your mental health. It's based on patterns from 200+ founder interviews.</p>
+                <p>Most solo founders don't realize they're burning out until they're already toast. This tracker helps you catch the early warning signs before you make terrible decisions, ghost your customers, or completely lose your mind.</p>
             </div>
             
             <div class="tracker-section">
@@ -243,7 +243,7 @@
                     </div>
                     <div class="symptom-item">
                         <input type="checkbox" class="symptom-checkbox" data-points="2">
-                        <span class="symptom-text">I get annoyed at "stupid" questions from my team (more than usual)</span>
+                        <span class="symptom-text">I get annoyed at "stupid" customer questions (more than usual)</span>
                         <span class="severity medium">Medium</span>
                     </div>
                     <div class="symptom-item">
@@ -296,7 +296,7 @@
                     </div>
                     <div class="symptom-item">
                         <input type="checkbox" class="symptom-checkbox" data-points="1">
-                        <span class="symptom-text">I avoid networking events because they feel like "work"</span>
+                        <span class="symptom-text">I avoid other founder events/calls because I "don't have time"</span>
                         <span class="severity low">Low</span>
                     </div>
                     <div class="symptom-item">
@@ -310,12 +310,12 @@
                     <h3>💼 Business/Decision Making Signs</h3>
                     <div class="symptom-item">
                         <input type="checkbox" class="symptom-checkbox" data-points="3">
-                        <span class="symptom-text">I've been avoiding important conversations with co-founders/investors</span>
+                        <span class="symptom-text">I've been avoiding important calls with advisors/mentors</span>
                         <span class="severity high">High</span>
                     </div>
                     <div class="symptom-item">
                         <input type="checkbox" class="symptom-checkbox" data-points="2">
-                        <span class="symptom-text">I micromanage more than I used to</span>
+                        <span class="symptom-text">I handle every customer issue personally (even small ones)</span>
                         <span class="severity medium">Medium</span>
                     </div>
                     <div class="symptom-item">
@@ -333,6 +333,11 @@
                         <span class="symptom-text">I check competitor news obsessively (daily+)</span>
                         <span class="severity medium">Medium</span>
                     </div>
+                    <div class="symptom-item">
+                        <input type="checkbox" class="symptom-checkbox" data-points="2">
+                        <span class="symptom-text">I procrastinate on big decisions because "I need more data"</span>
+                        <span class="severity medium">Medium</span>
+                    </div>
                 </div>
             </div>
             
@@ -348,13 +353,6 @@
             </div>
             
             <button class="reset-btn" onclick="resetTracker()">Reset Assessment</button>
-            
-            <div class="download-section">
-                <h3>📥 Download This Tracker</h3>
-                <p>Get the PDF version to track your progress over time, plus a bonus "Founder Energy Audit" worksheet.</p>
-                <button class="download-btn" onclick="downloadPDF()">Download PDF Tracker</button>
-                <button class="download-btn" onclick="downloadNotion()">Get Notion Template</button>
-            </div>
         </div>
     </div>
     
@@ -417,31 +415,31 @@
             
             if (totalScore <= 8) {
                 actions = [
-                    'Schedule a weekly "no work" block in your calendar',
-                    'Set up automated metrics dashboards to reduce manual checking',
-                    'Plan one social activity this week that has nothing to do with business'
+                    'Schedule a weekly "no work" block in your calendar (and actually stick to it)',
+                    'Set up one automated process to reduce daily manual work',
+                    'Reach out to one founder friend for a non-business conversation'
                 ];
             } else if (totalScore <= 16) {
                 actions = [
-                    'Block out 2 hours this week for strategic thinking (no execution)',
-                    'Delegate one recurring task to a team member',
-                    'Set a "devices off" time after 9 PM',
-                    'Schedule a check-in with a founder friend or mentor'
+                    'Block out 3 hours this week for strategic thinking (no execution)',
+                    'Write down the 3 tasks only you can do - delegate or eliminate the rest',
+                    'Set a "devices off" time after 9 PM and mean it',
+                    'Schedule a call with another solo founder who\'s been through this'
                 ];
             } else if (totalScore <= 25) {
                 actions = [
-                    'Take a 3-day weekend (no work emails)',
-                    'Hire help for your biggest time drain within 2 weeks',
-                    'Set up weekly 1:1s with your team to reduce ad-hoc interruptions',
-                    'Book a call with a therapist or coach who works with founders'
+                    'Take a 4-day weekend (set up autoresponders, the world won\'t end)',
+                    'Hire a VA or freelancer for your biggest time drain within 2 weeks',
+                    'Join a solo founder support group or mastermind',
+                    'Book a session with a therapist who understands entrepreneur stress'
                 ];
             } else {
                 actions = [
-                    'Take a full week off (delegate or pause non-critical work)',
-                    'Have an honest conversation with co-founders/spouse about your current state',
-                    'Consider bringing in a COO or operations person immediately',
-                    'Schedule a founder mental health check-up with a professional',
-                    'Audit your calendar and cut 50% of non-essential meetings'
+                    'Take a full week off (yes, really - set boundaries with customers)',
+                    'Have an honest conversation with your support system about your current state',
+                    'Hire someone to handle customer support or operations immediately',
+                    'Get professional help - solo founder burnout is real and treatable',
+                    'Consider if you need to pivot your business model to be more sustainable'
                 ];
             }
             
@@ -456,6 +454,14 @@
             });
             totalScore = 0;
             updateScore();
+        }
+        
+        function downloadPDF() {
+            alert('PDF download would be available in the full version. This includes weekly tracking sheets and the Founder Energy Audit.');
+        }
+        
+        function downloadNotion() {
+            alert('Notion template would be available in the full version. Includes automated scoring and monthly review prompts.');
         }
         
         // Add event listeners
